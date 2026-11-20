@@ -1,6 +1,5 @@
 /* 미러쏙 홈페이지 · MirrorSsok website · 라이트 테마 토큰은 앱 디자인 시스템과 같음 */
 @font-face{font-family:'Pretendard';src:url('../fonts/PretendardVariable.woff2') format('woff2-variations');font-weight:100 900;font-display:swap}
-@font-face{font-family:'MS';src:url('../fonts/MaterialSymbolsRounded-subset.woff2') format('woff2');font-weight:100 700;font-display:block}
 @font-face{font-family:'JBM';src:url('../fonts/JetBrainsMono-subset.woff2') format('woff2');font-weight:100 800;font-display:swap}
 :root{--bg:#F3F5F8;--s1:#FFFFFF;--s2:#F0F3F7;--s3:#E6EBF1;--bd:#DDE2EA;--bd2:#C8D0DB;--tx:#121A2B;--tx2:#4A5466;--tx3:#5F6878;
 --ac:#2DD4A7;--ac-h:#22C49A;--on-ac:#0B1424;--ac-soft:#DDF7EF;--ac-tx:#0B7F62;--ac-tx-soft:#075E4B;--ac-ln:#0E9F7A;
@@ -14,8 +13,8 @@ body{margin:0;font-family:'Pretendard',system-ui,-apple-system,'Segoe UI',sans-s
 img,svg{max-width:100%;display:block}
 a{color:inherit}
 h1,h2,h3,h4,p{margin:0}
-.ms{font-family:'MS';font-weight:400;font-style:normal;font-size:22px;line-height:1;letter-spacing:normal;text-transform:none;white-space:nowrap;direction:ltr;font-feature-settings:'liga';-webkit-font-feature-settings:'liga';font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;display:inline-block;flex:none;user-select:none}
-.ms.f{font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24}
+svg.ms,.ms{width:1em;height:1em;font-size:22px;line-height:1;display:inline-block;flex:none;user-select:none;overflow:visible;fill:currentColor;max-width:none;vertical-align:-.15em}
+svg.ms path{fill:currentColor}
 .mono{font-family:'JBM',ui-monospace,Consolas,monospace}
 .sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .wrap{max-width:calc(var(--w) + var(--pad)*2);margin:0 auto;padding:0 var(--pad)}

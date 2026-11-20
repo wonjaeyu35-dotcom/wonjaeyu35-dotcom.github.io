@@ -16,13 +16,20 @@
       var set = function (k, t) { document.querySelectorAll('[data-ver="' + k + '"]').forEach(function (el) { el.textContent = t; }); };
       set('version', v.version); set('sha256', v.sha256); set('size', ko ? '약 ' + mb + 'MB' : 'About ' + mb + ' MB');
       var act = card.querySelector('.dlact'), a = act.querySelector('[data-dl]'), note = act.querySelector('[data-dl-note]');
-      var label = a.lastChild;
+      var label = a.querySelector('.bl') || a.lastChild;
       var href = v.url || v.download_url;
+      var setIcon = function (name) {
+        var svg = a.querySelector('svg.ms'); if (!svg) return;
+        var d = name === 'mail' ? act.dataset.iconMail : act.dataset.iconDownload;
+        var path = svg.querySelector('path');
+        if (path && d) path.setAttribute('d', d);
+        svg.setAttribute('data-icon', name);
+      };
       if (href) {
-        a.href = href; a.setAttribute('download', ''); a.firstChild.textContent = 'download'; label.textContent = act.dataset.lOn;
+        a.href = href; a.setAttribute('download', ''); setIcon('download'); label.textContent = act.dataset.lOn;
         if (note) note.hidden = true;
       } else {
-        a.href = 'contact.html?topic=download'; a.removeAttribute('download'); a.firstChild.textContent = 'mail'; label.textContent = act.dataset.lOff;
+        a.href = 'contact.html?topic=download'; a.removeAttribute('download'); setIcon('mail'); label.textContent = act.dataset.lOff;
         if (note) note.hidden = false;
       }
       card.dataset.loaded = '1';

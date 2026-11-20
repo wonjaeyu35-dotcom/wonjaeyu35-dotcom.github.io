@@ -70,6 +70,8 @@ h1,h2,h3,h4,p{margin:0}
 .fi{width:44px;height:44px;border-radius:12px;background:var(--ac-soft);color:var(--ac-tx);display:flex;align-items:center;justify-content:center}
 .fi .ms{font-size:24px}
 .tag{display:inline-flex;align-items:center;gap:4px;height:22px;line-height:22px;font-size:12px;font-weight:700;border-radius:6px;padding:0 8px;white-space:nowrap}
+.tag.t-beta{background:var(--ac-soft);color:var(--ac-tx-soft)}
+.brand .tag{margin-left:2px;font-size:11px;height:20px;padding:0 7px}
 .t-pro{background:var(--ac-soft);color:var(--ac-tx-soft)}.t-free{background:var(--s3);color:var(--tx2)}.t-info{background:var(--info-soft);color:var(--info)}.t-ex{background:var(--s3);color:var(--tx2)}
 .row{display:flex;align-items:center}.g6{gap:6px}.g8{gap:8px}.g12{gap:12px}.g16{gap:16px}
 .chk{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.5}
